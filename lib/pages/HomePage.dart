@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
         child: Text("welcome to  $hours hrs of $name"),
       ),
     ),
-    drawer: Drawer(backgroundColor: Colors.black12),
+    drawer: Drawer(),
     );
   }
 }
