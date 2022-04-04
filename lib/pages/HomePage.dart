@@ -12,7 +12,8 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
       child: Container(
-        child: Text("welcome to  $hours hrs of $name"),
+        child: Text("This is Home Page",style:TextStyle(fontSize: 40),),
+        
       ),
     ),
     drawer: Drawer(),
