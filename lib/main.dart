@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
 
       //darkTheme: ThemeData(brightness: Brightness.dark),//for dark mode chnage thememode to dark and uncomment this
 
-      initialRoute: "/login", //this route will open when app opens, like a default route
+      initialRoute: MyRoutes.homeRoute, //this route will open when app opens, like a default route
       routes: {
         "/": (context) => LoginPage(),
         MyRoutes.homeRoute:(context) => HomePage(),
