@@ -6,9 +6,16 @@ import 'package:flutter_application_1/utils/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  String name = "";
+  bool changed = false;
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -23,7 +30,7 @@ class LoginPage extends StatelessWidget {
             ),
       
             Text(
-              "Welcome",
+              "Welcome $name",
               style: TextStyle(
               fontSize: 22,
               fontWeight: FontWeight.bold,
@@ -40,6 +47,20 @@ class LoginPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 32.0,horizontal: 32.0),
               child: Column(
                 children: [
+
+                  TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "Enter name",
+                      labelText: "Username"
+                    ),
+                    onChanged: (value){
+                      name = value;
+                      setState(() {
+                        
+                      });
+                    },
+                  ),
+
                   TextFormField(
                     decoration: InputDecoration(
                       hintText: "Enter mail id",
@@ -68,11 +89,38 @@ class LoginPage extends StatelessWidget {
                   height: 20.0,
                   ),
       
-                  ElevatedButton(
-                    onPressed: (){
+                  InkWell(
+                    onTap: () async{
+                      setState(() {
+                        changed = true;
+                      });
+                      await Future.delayed(Duration(seconds: 1));
                       Navigator.pushNamed(context, MyRoutes.homeRoute);
-                    },//Navigator.push(context, MaterialPageRoute(builder: (context => Homepage()),)),
-                    child: Text("Register")),
+
+                    },
+                    child: AnimatedContainer(
+                      
+                      duration: Duration(seconds: 1),
+                      width: changed?50:150,
+                      height: 40,
+                      
+                      alignment: Alignment.center,
+                      child: changed?Icon(Icons.done,color: Colors.white,):Text(
+                        "Register",
+                        style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.white),
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.purple,
+                        borderRadius: BorderRadius.circular(changed?50:10)
+                      ), 
+                    ),
+                  )
+
+                  // ElevatedButton(
+                  //   onPressed: (){
+                  //     Navigator.pushNamed(context, MyRoutes.homeRoute);
+                  //   },//Navigator.push(context, MaterialPageRoute(builder: (context => Homepage()),)),
+                  //   child: Text("Register")),
                     
                 ],
               ),
