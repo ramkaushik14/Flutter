@@ -17,7 +17,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.purple),
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+        appBarTheme: AppBarTheme(
+          color: Colors.white,
+          iconTheme: IconThemeData(color: Colors.black),
+          titleTextStyle: TextStyle(color: Colors.black),
+          elevation: 0.0
+        )
+      ),
+      
       // fontFamily: GoogleFonts.lato().fontFamily,
 
       //darkTheme: ThemeData(brightness: Brightness.dark),//for dark mode chnage thememode to dark and uncomment this

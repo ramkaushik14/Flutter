@@ -9,7 +9,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("1st trail"),
+        centerTitle: true,
+        title: Text("Trike",textAlign: TextAlign.center,textScaleFactor: 1.7,),
+        
+        
+        //titleTextStyle: TextStyle()),
+        
       ),
       body: Center(
       child: Container(
