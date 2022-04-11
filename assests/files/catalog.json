@@ -1,0 +1,29 @@
+{
+    "products" : [
+
+        {
+            "name" : "Trike Model 1",
+            "image" : "assests/images/trike.jpeg",
+            "price" : 100,
+            "runtime" : "30min"
+
+        },
+
+        {
+            "name" : "Trike Model 1",
+            "image" : "assests/images/trike.jpeg",
+            "price" : 200,
+            "runtime" : "60min"
+
+        },
+
+
+        {
+            "name" : "Trike Model 1",
+            "image" : "assests/images/trike.jpeg",
+            "price" : 300,
+            "runtime" : "90min"
+
+        }
+    ]
+}
