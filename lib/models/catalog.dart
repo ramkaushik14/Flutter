@@ -1,8 +1,8 @@
 class catalog_Model
 {
-  static final items=[
+  static  List<Item> items=[
 
-    Item("Trike1", "assests/images/trike.jpeg", 100, "1hr"),
+    Item(name: "Trike1", image:"assests/images/trike.jpeg", price:100, runtime: "1hr"),
 
   ];
 }
@@ -17,7 +17,17 @@ class Item
   final num price;
   final String runtime;
 
-  Item(this.name, this.image, this.price, this.runtime);
+  Item({required this.name, required this.image, required this.price, required this.runtime});
+
+  factory Item.fromMap(Map<String,dynamic> map)
+  {
+    return Item(
+      name : map["name"],
+      image : map["image"],
+      price : map["price"],
+      runtime : map["runtime"]
+      );
+  }
 
   
 

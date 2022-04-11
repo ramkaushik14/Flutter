@@ -13,16 +13,22 @@ class itemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+
       child: ListTile(
         
         leading: Image.asset(item.image),
+
         title: Text(item.name,
                   style: 
                   TextStyle(
                     fontWeight: FontWeight.bold,
                     ),
                   textScaleFactor: 1.2,),
+
+
         subtitle: Text(item.runtime),
+
+        
         trailing: Text(
                   "Rupees ${item.price}",
                   style: 
