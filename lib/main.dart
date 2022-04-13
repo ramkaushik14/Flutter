@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       themeMode: ThemeMode.light,
       theme: ThemeData(
+        fontFamily: GoogleFonts.poppins().fontFamily,
         primarySwatch: Colors.purple,
         appBarTheme: AppBarTheme(
           color: Colors.white,
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         )
       ),
       
-      // fontFamily: GoogleFonts.lato().fontFamily,
+      
 
       //darkTheme: ThemeData(brightness: Brightness.dark),//for dark mode chnage thememode to dark and uncomment this
 
